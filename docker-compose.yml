@@ -1,0 +1,28 @@
+version: '2.1'
+
+services:
+
+  web:
+    build: .
+    ports:
+      - '4000:4000'
+    command: mix phoenix.server
+    environment:
+      MIX_ENV: dev
+      PORT: 4000
+    volumes:
+      - .:/app
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: 'postgres:9.6-alpine'
+    ports:
+      - '5432:5432'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 30s
+      retries: 3
+

@@ -14,13 +14,14 @@ defmodule WeatherStationManager.Router do
   end
 
   scope "/", WeatherStationManager do
-    pipe_through :browser # Use the default browser stack
-
+    pipe_through :browser     
+    
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", WeatherStationManager do
-  #   pipe_through :api
-  # end
+  scope "/api", WeatherStationManager do
+    pipe_through :api
+
+    post "/updates", UpdatesController, :create
+  end
 end

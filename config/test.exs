@@ -15,5 +15,5 @@ config :weather_station_manager, WeatherStationManager.Repo,
   username: "postgres",
   password: "postgres",
   database: "weather_station_manager_test",
-  hostname: "localhost",
+  hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox

@@ -17,7 +17,14 @@ docker-compose run web mix ecto.create
 Then, to start the app:
 
 ```
-docker-compose up
+docker-compose up web
 ```
 
 You can now visit the homepage at http://localhost:4000.
+
+## Tests
+To run tests, execute:
+
+```
+docker-compose run test mix test
+```

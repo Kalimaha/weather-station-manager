@@ -1,15 +1,20 @@
-FROM elixir:latest
+# Base image
+FROM elixir:1.6.4-alpine
 
-RUN apt-get update && apt-get install -y postgresql-client
+# Install PostgreSQL client
+RUN apk update && apk add -y postgresql-client
 
+# Add source code to the image
 ADD . /app
 
+# Install Phoenix
 RUN mix local.hex --force
 RUN mix archive.install --force https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
-
 RUN mix local.rebar --force
 
+# Set work directory
 WORKDIR /app
 
+# Expose Phoenix's default port
 EXPOSE 4000
 

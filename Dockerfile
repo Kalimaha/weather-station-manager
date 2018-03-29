@@ -2,7 +2,7 @@
 FROM elixir:1.6.4-alpine
 
 # Install PostgreSQL client
-RUN apk update && apk add -y postgresql-client
+RUN apk update && apk add -y postgresql-client git
 
 # Add source code to the image
 ADD . /app

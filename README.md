@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/Kalimaha/weather-station-manager.svg?branch=master)](https://travis-ci.org/Kalimaha/weather-station-manager)
 [![Coverage Status](https://coveralls.io/repos/github/Kalimaha/weather-station-manager/badge.svg?branch=master)](https://coveralls.io/github/Kalimaha/weather-station-manager?branch=master)
+[![Hosted By](https://img.shields.io/badge/hosted%20by-heroku-blue.svg)](https://weather-station-manager.herokuapp.com/api/updates/)
 
 # Weather Station Manager
 Phoenix-based web-app that receives and stores data from the home-made weather station.

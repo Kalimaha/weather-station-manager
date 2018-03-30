@@ -7,5 +7,7 @@ defmodule WeatherStationManager.Router do
 
   scope "/api", WeatherStationManager do
     pipe_through :api
+
+    post "/updates", UpdatesController, :create
   end
 end

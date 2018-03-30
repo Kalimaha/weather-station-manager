@@ -7,3 +7,4 @@ defmodule WeatherStationManager.UpdatesControllerTest do
     assert json_response(conn, 201) == %{ "status" => "ok" }
   end
 end
+

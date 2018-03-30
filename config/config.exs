@@ -12,8 +12,8 @@ config :weather_station_manager,
 # Configures the endpoint
 config :weather_station_manager, WeatherStationManager.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "5r0DUF/H8sUbSFZGO0xOMAU+iRRVQdhge6EYDxaGf5Yyavo2/ggltrYkUtRrhpUy",
-  render_errors: [view: WeatherStationManager.ErrorView, accepts: ~w(html json)],
+  secret_key_base: "sPf9R2d/7/92TQVqBQpmJYOX+w3hcjuQaOnhCHp//FKXQj3Em8fXqP3dRwSxfrPt",
+  render_errors: [view: WeatherStationManager.ErrorView, accepts: ~w(json)],
   pubsub: [name: WeatherStationManager.PubSub,
            adapter: Phoenix.PubSub.PG2]
 

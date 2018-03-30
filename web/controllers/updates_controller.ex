@@ -7,3 +7,4 @@ defmodule WeatherStationManager.UpdatesController do
     |> json(%{ status: "ok" })
   end
 end
+

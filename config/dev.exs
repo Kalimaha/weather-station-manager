@@ -14,17 +14,6 @@ config :weather_station_manager, WeatherStationManager.Endpoint,
   watchers: []
 
 
-# Watch static and templates for browser reloading.
-config :weather_station_manager, WeatherStationManager.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
-      ~r{priv/gettext/.*(po)$},
-      ~r{web/views/.*(ex)$},
-      ~r{web/templates/.*(eex)$}
-    ]
-  ]
-
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
 

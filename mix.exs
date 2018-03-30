@@ -10,8 +10,7 @@ defmodule WeatherStationManager.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      aliases: aliases(),
-     deps: deps(),
-     test_coverage: [tool: ExCoveralls]]
+     deps: deps()]
   end
 
   # Configuration for the OTP application.
@@ -19,7 +18,7 @@ defmodule WeatherStationManager.Mixfile do
   # Type `mix help compile.app` for more information.
   def application do
     [mod: {WeatherStationManager, []},
-     applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
+     applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex]]
   end
 
@@ -35,11 +34,8 @@ defmodule WeatherStationManager.Mixfile do
      {:phoenix_pubsub, "~> 1.0"},
      {:phoenix_ecto, "~> 3.0"},
      {:postgrex, ">= 0.0.0"},
-     {:phoenix_html, "~> 2.6"},
-     {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"},
-     {:excoveralls, github: "parroty/excoveralls"}]
+     {:cowboy, "~> 1.0"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

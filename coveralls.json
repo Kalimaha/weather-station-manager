@@ -1,0 +1,9 @@
+{
+  "skip_files": [
+    "lib",
+    "web/views",
+    "web/web.ex",
+    "web/channels",
+    "test/support"
+  ]
+}

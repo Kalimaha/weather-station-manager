@@ -4,7 +4,7 @@ defmodule WeatherStationManager.UpdatesControllerTest do
   test "POST /updates", %{conn: conn} do
     conn = post conn, "/api/updates"
 
-    assert json_response(conn, 201) == %{ "status" => "ok" }
+    assert json_response(conn, 201) == %{ "status" => "OK" }
   end
 end
 

@@ -23,3 +23,5 @@ script: mix coveralls.travis
 deploy:
   provider: heroku
   api_key: bd5bc56f-753d-46ba-b0e7-69a8076a2f2a
+  run: 'POOL_SIZE=2 mix ecto.migrate'
+

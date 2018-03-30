@@ -4,7 +4,7 @@ defmodule WeatherStationManager.UpdatesController do
   def create(conn, _params) do
     conn
     |> put_status(201)
-    |> json(%{ status: "ok" })
+    |> json(%{ status: "OK" })
   end
 end
 

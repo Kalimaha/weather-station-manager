@@ -8,12 +8,11 @@ defmodule WeatherStationManager do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # Start the Ecto repository
       supervisor(WeatherStationManager.Repo, []),
-      # Start the endpoint when the application starts
       supervisor(WeatherStationManager.Endpoint, []),
-      # Start your own worker by calling: WeatherStationManager.Worker.start_link(arg1, arg2, arg3)
-      # worker(WeatherStationManager.Worker, [arg1, arg2, arg3]),
+      worker(Tizio.Source, []),
+      worker(Tizio.DBManager, []),
+      worker(Tizio.TwitterManager, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

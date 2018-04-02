@@ -37,7 +37,9 @@ defmodule WeatherStationManager.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:excoveralls, github: "parroty/excoveralls"}]
+     {:excoveralls, github: "parroty/excoveralls"},
+     {:gen_stage, "~> 0.12"},
+     {:mock, "~> 0.3.0", only: :test}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.

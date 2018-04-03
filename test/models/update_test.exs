@@ -3,7 +3,6 @@ defmodule WeatherStationManager.UpdateTest do
 
   alias WeatherStationManager.Update
 
-  @invalid_attributes %{ :spam => "eggs" }
   @valid_attributes %{
     :station => "South Yarra",
     :lat => 42.0,
@@ -17,4 +16,3 @@ defmodule WeatherStationManager.UpdateTest do
     assert changeset.valid?
   end
 end
-

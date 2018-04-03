@@ -58,17 +58,6 @@ defmodule WeatherStationManager.Web do
     end
   end
 
-  def channel do
-    quote do
-      use Phoenix.Channel
-
-      alias WeatherStationManager.Repo
-      import Ecto
-      import Ecto.Query
-      import WeatherStationManager.Gettext
-    end
-  end
-
   @doc """
   When used, dispatch to the appropriate controller/view/etc.
   """

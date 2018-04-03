@@ -7,7 +7,7 @@ defmodule WeatherStationManager.Update do
     field :lon,          :float
     field :temperature,  :float
 
-    timestamps
+    timestamps()
   end
 
   def changeset(struct, params \\ %{}) do
@@ -15,4 +15,3 @@ defmodule WeatherStationManager.Update do
     |> cast(params, [:station, :lat, :lon, :temperature])
   end
 end
-

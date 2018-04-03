@@ -13,11 +13,10 @@ defmodule WeatherStationManager.UpdatesControllerTest do
   end
 
   test "the update is broadcasted to the workers", %{conn: conn} do
-    with_mock Tizio.Source, [broadcast_update: fn(_spam) -> :eggs end] do
+    with_mock UpdatesManager, [broadcast_update: fn(_spam) -> :eggs end] do
       post conn, "/api/updates", @update
 
-      assert called Tizio.Source.broadcast_update(@update)
+      assert called UpdatesManager.broadcast_update(@update)
     end
   end
 end
-

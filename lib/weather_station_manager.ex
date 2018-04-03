@@ -10,9 +10,9 @@ defmodule WeatherStationManager do
     children = [
       supervisor(WeatherStationManager.Repo, []),
       supervisor(WeatherStationManager.Endpoint, []),
-      worker(Tizio.Source, []),
-      worker(Tizio.DBManager, []),
-      worker(Tizio.TwitterManager, [])
+      worker(UpdatesManager, []),
+      worker(UpdatesDBWorker, []),
+      worker(UpdatesTwitterWorker, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

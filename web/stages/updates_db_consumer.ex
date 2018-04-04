@@ -1,4 +1,4 @@
-defmodule UpdatesDBWorker do
+defmodule UpdatesDBConsumer do
   use GenStage
 
   require Logger
@@ -8,7 +8,7 @@ defmodule UpdatesDBWorker do
   end
 
   def init(:ok) do
-    { :consumer, :ok, subscribe_to: [ UpdatesManager ] }
+    { :consumer, :ok, subscribe_to: [ UpdatesProducer ] }
   end
 
   def handle_events(events, _from, state) do

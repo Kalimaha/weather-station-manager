@@ -1,4 +1,4 @@
-defmodule UpdatesTwitterWorker do
+defmodule UpdatesTwitterConsumer do
   use GenStage
 
   require Logger
@@ -8,7 +8,7 @@ defmodule UpdatesTwitterWorker do
   end
 
   def init(:ok) do
-    { :consumer, :ok, subscribe_to: [ UpdatesManager ] }
+    { :consumer, :ok, subscribe_to: [ UpdatesProducer ] }
   end
 
   def handle_events(events, _from, state) do

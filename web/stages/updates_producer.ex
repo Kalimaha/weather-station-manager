@@ -1,4 +1,4 @@
-defmodule UpdatesManager do
+defmodule UpdatesProducer do
   use GenStage
 
   require Logger

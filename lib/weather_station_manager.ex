@@ -10,9 +10,9 @@ defmodule WeatherStationManager do
     children = [
       supervisor(WeatherStationManager.Repo, []),
       supervisor(WeatherStationManager.Endpoint, []),
-      worker(UpdatesManager, []),
-      worker(UpdatesDBWorker, []),
-      worker(UpdatesTwitterWorker, [])
+      worker(UpdatesProducer, []),
+      worker(UpdatesDBConsumer, []),
+      worker(UpdatesTwitterConsumer, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

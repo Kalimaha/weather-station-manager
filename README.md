@@ -12,10 +12,13 @@ This project uses Docker and Docker compose for development. To build the images
 docker-compose build
 ```
 
+??? -> "mix deps.get"
+
 The first time you will need to create the DB:
 
 ```
 docker-compose run web mix ecto.create
+docker-compose run web mix ecto.migrate
 ```
 
 Then, to start the app:

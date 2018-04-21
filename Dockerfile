@@ -15,6 +15,8 @@ RUN mix local.rebar --force
 # Set work directory
 WORKDIR /app
 
+# Install dependencies
+RUN mix deps.get
+
 # Expose Phoenix's default port
 EXPOSE 4000
-

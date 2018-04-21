@@ -8,8 +8,7 @@ defmodule WeatherStationManager.Repo.Migrations.AddUpdatesTable do
       add :lon,          :float
       add :temperature,  :float
 
-      timestamps
+      timestamps()
     end
   end
 end
-
